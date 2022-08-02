@@ -22,6 +22,7 @@
         android:hint="BASE 2"
         android:inputType="text"
         android:padding="20dp"
+        android:text=""
         android:textColorHint="@color/white" />
 
     <EditText
@@ -36,6 +37,7 @@
         android:background="#30ffffff"
         android:drawableLeft="@drawable/base_8"
         android:drawablePadding="20dp"
+        android:text=""
         android:hint="BASE 8"
         android:inputType="text"
         android:padding="20dp"
@@ -53,6 +55,7 @@
         android:background="#30ffffff"
         android:drawableLeft="@drawable/base_10"
         android:drawablePadding="20dp"
+        android:text=""
         android:hint="BASE 10"
         android:inputType="text"
         android:padding="20dp"
@@ -70,6 +73,7 @@
         android:background="#30ffffff"
         android:drawableLeft="@drawable/base_16"
         android:drawablePadding="20dp"
+        android:text=""
         android:hint="BASE 16"
         android:inputType="text"
         android:padding="20dp"

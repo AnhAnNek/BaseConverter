@@ -5,8 +5,8 @@ public class NumberConversion {
     private String binary;
     private String octal;
     private String hexadecimal;
-    private final int CHAR_A_MINUS_10 = 55;
-    public final int NUMBER_OF_DIGITS_TO_TAKE = 10;
+    private static final int CHAR_A_MINUS_10 = 55;
+    private static final int NUMBER_OF_DIGITS_TO_TAKE = 10;
 
     public void show() {
         System.out.println("Binary: " + getBinary());

@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -26,25 +27,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 NumberConversion number = new NumberConversion();
-                if (binary.getText().toString() != null) {
+                String binaryStr = binary.getText().toString().trim();
+                String octalStr = octal.getText().toString().trim();
+                String decimalStr = decimal.getText().toString().trim();
+                String hexaStr = hexa.getText().toString().trim();
+                if (!binaryStr.equals("")) {
                     number.setBinary(binary.getText().toString());
-
                     editAllTextView(octal, number.getOctal(), decimal, number.getDecimal(), hexa, number.getHexadecimal());
-                }
-                if (octal.getText().toString() != null) {
+                } else if (!octalStr.equals("")) {
                     number.setOctal(octal.getText().toString());
-
                     editAllTextView(binary, number.getBinary(), decimal, number.getDecimal(), hexa, number.getHexadecimal());
-                }
-                if (decimal.getText().toString() != null) {
+                } else if (!decimalStr.equals("")) {
                     number.setDecimal(decimal.getText().toString());
-
                     editAllTextView(binary, number.getBinary(), octal, number.getOctal(), hexa, number.getHexadecimal());
-                }
-                if (hexa.getText().toString() != null){
+                } else if (!hexaStr.equals("")){
                     number.setHexadecimal(hexa.getText().toString());
-
                     editAllTextView(binary, number.getBinary(), octal, number.getOctal(), decimal, number.getDecimal());
+                } else {
+
                 }
             }
         });
@@ -54,10 +54,10 @@ public class MainActivity extends AppCompatActivity {
         resetBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                binary.setText(null);
-                octal.setText(null);
-                decimal.setText(null);
-                hexa.setText(null);
+                binary.setText("");
+                octal.setText("");
+                decimal.setText("");
+                hexa.setText("");
             }
         });
     }
