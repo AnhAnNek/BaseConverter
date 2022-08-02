@@ -8,13 +8,6 @@ public class NumberConversion {
     private static final int CHAR_A_MINUS_10 = 55;
     private static final int NUMBER_OF_DIGITS_TO_TAKE = 10;
 
-    public void show() {
-        System.out.println("Binary: " + getBinary());
-        System.out.println("Octal: " + getOctal());
-        System.out.println("Decimal: " + getDecimal());
-        System.out.println("Hexadecimal: " + getHexadecimal());
-    }
-
     private void convertFromBase10(String str) {
         binary = convertBase10ToBaseX(str, 2);
         octal = convertBase10ToBaseX(str, 8);

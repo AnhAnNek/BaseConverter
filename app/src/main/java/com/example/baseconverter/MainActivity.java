@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 String octalStr = octal.getText().toString().trim();
                 String decimalStr = decimal.getText().toString().trim();
                 String hexaStr = hexa.getText().toString().trim();
+
                 if (!binaryStr.equals("")) {
                     number.setBinary(binary.getText().toString());
                     editAllTextView(octal, number.getOctal(), decimal, number.getDecimal(), hexa, number.getHexadecimal());
@@ -40,11 +41,9 @@ public class MainActivity extends AppCompatActivity {
                 } else if (!decimalStr.equals("")) {
                     number.setDecimal(decimal.getText().toString());
                     editAllTextView(binary, number.getBinary(), octal, number.getOctal(), hexa, number.getHexadecimal());
-                } else if (!hexaStr.equals("")){
+                } else {
                     number.setHexadecimal(hexa.getText().toString());
                     editAllTextView(binary, number.getBinary(), octal, number.getOctal(), decimal, number.getDecimal());
-                } else {
-
                 }
             }
         });
